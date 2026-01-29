@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Truck Rentals | Water Truck Supply | Fort Worth, TX</title>
+    <meta name="description" content="Rent 4,000 gallon water trucks in Texas. Late model Freightliner M2106 trucks with GPS tracking, backup cameras, and responsive service. Request a quote today.">
     <title>Water Trucks for Sale | Water Truck Supply | Fort Worth, TX</title>
     <meta name="description" content="Buy quality water trucks from Water Truck Supply. Late model Freightliner M2106 4,000 gallon water trucks available. Superior quality, competitive pricing.">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -81,6 +83,41 @@
         .page-header::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
         .page-header .container { position: relative; z-index: 2; }
         .page-header h1 { color: var(--white); margin-bottom: var(--space-sm); }
+        .page-header p { color: var(--light-gray); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+        
+        /* Rental Intro */
+        .rental-intro { padding: var(--space-2xl) 0; background: var(--white); }
+        .rental-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+        @media (max-width: 900px) { .rental-grid { grid-template-columns: 1fr; } }
+        .rental-image { border-radius: var(--card-radius); overflow: hidden; }
+        .rental-image img { width: 100%; height: 100%; object-fit: cover; }
+        .rental-content h2 { margin-bottom: var(--space-md); }
+        .rental-content p { color: var(--charcoal); margin-bottom: var(--space-md); }
+        .rental-features { list-style: none; margin-bottom: var(--space-lg); }
+        .rental-features li { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm); font-weight: 600; }
+        .rental-features svg { width: 22px; height: 22px; fill: var(--primary-blue); flex-shrink: 0; }
+        
+        /* Specs Section */
+        .specs { padding: var(--space-2xl) 0; background: var(--off-white); }
+        .section-header { text-align: center; max-width: 600px; margin: 0 auto var(--space-xl); }
+        .section-label { font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-blue); margin-bottom: var(--space-sm); }
+        .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+        @media (max-width: 900px) { .specs-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .specs-grid { grid-template-columns: 1fr; } }
+        .spec-card { background: var(--white); border: 2px solid var(--light-gray); border-radius: var(--card-radius); padding: var(--space-md); text-align: center; transition: transform 0.15s ease; }
+        .spec-card:hover { transform: scale(1.03); }
+        .spec-card svg { width: 40px; height: 40px; fill: var(--primary-blue); margin-bottom: var(--space-sm); }
+        .spec-card h3 { margin-bottom: var(--space-xs); font-size: 1.1rem; }
+        .spec-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 0; }
+        
+        /* Full Specs */
+        .full-specs { padding: var(--space-2xl) 0; background: var(--white); }
+        .specs-columns { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
+        @media (max-width: 768px) { .specs-columns { grid-template-columns: 1fr; } }
+        .specs-list { list-style: none; }
+        .specs-list li { padding: var(--space-sm) 0; border-bottom: 1px solid var(--light-gray); display: flex; align-items: flex-start; gap: var(--space-sm); }
+        .specs-list li:last-child { border-bottom: none; }
+        .specs-list svg { width: 20px; height: 20px; fill: var(--primary-blue); flex-shrink: 0; margin-top: 2px; }
         .page-header p { color: var(--light-gray); font-size: 1.2rem; max-width: 700px; margin: 0 auto var(--space-md); }
         .page-header .btn { margin: 0 var(--space-xs); }
         
@@ -209,6 +246,45 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
+            <h1>Water Truck Rentals</h1>
+            <p>Whether you need a single water truck for a one-time project or several units on an ongoing basis, we're here to help. Our fleet consists of late model water trucks with low hours.</p>
+        </div>
+    </section>
+    
+    <!-- Rental Intro -->
+    <section class="rental-intro">
+        <div class="container">
+            <div class="rental-grid">
+                <div class="rental-image">
+                    <img src="../Water_Truck.webp" alt="Water Truck Supply - 4,000 Gallon Water Truck">
+                </div>
+                <div class="rental-content">
+                    <h2>Your Texas Water Truck Supplier</h2>
+                    <p>Water trucks from Water Truck Supply are used on a variety of projects including compaction, dust control, agriculture, fire suppression, and soil stabilization. We have one of the newest fleets in the region!</p>
+                    <h3>Rental Features</h3>
+                    <ul class="rental-features">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            GPS Tracking
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Managed PM Services
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            176 Hour Month
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Late Model Fleet
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            Responsive Service
+                        </li>
+                    </ul>
+                    <a href="#quote" class="btn btn-primary">Request a Quote</a>
             <h1>No B.S. Water Truck Sales</h1>
             <p>We specialize in selling quality 4,000 gallon water trucks across Texas and into neighboring states. Late model, low mileage units that are professionally maintained.</p>
             <a href="tel:8176015754" class="btn btn-primary">Give Us a Call</a>
@@ -254,6 +330,79 @@
         </div>
     </section>
     
+    <!-- Specs Highlights -->
+    <section class="specs">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Our Fleet</p>
+                <h2>Water Truck Specifications</h2>
+                <p>Freightliner M2106 chassis equipped for maximum productivity on the jobsite.</p>
+            </div>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <h3>300 HP Cummins L9</h3>
+                    <p>Powerful and reliable engine</p>
+                </div>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                    <h3>Allison 3500 Auto</h3>
+                    <p>Automatic transmission</p>
+                </div>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    <h3>4,000 Gallon Tank</h3>
+                    <p>ASTM A36 steel construction</p>
+                </div>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    <h3>Backup Camera</h3>
+                    <p>Enhanced visibility and safety</p>
+                </div>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <h3>GPS Tracking</h3>
+                    <p>Fleet management included</p>
+                </div>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <h3>Locking Differentials</h3>
+                    <p>Off-road capability</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Full Specs -->
+    <section class="full-specs">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Complete Details</p>
+                <h2>Full Equipment Specifications</h2>
+            </div>
+            <div class="specs-columns">
+                <ul class="specs-list">
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Freightliner M2106 Chassis</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatic Transmissions</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4,000 US gallon tanks</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>ASTM A36 steel construction for durability</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>FEA tested and designed</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Internal baffles</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Full length shaped tank runners</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>LINE-X® Lined Fender trays</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>24" Manway with mesh lift out grate</li>
+                </ul>
+                <ul class="specs-list">
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Water level indicator</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4" x 3" water pump</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>5 independently controlled spray heads with air operated valves</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Manual rewind hose reel with 50' of 1-1/2" hose</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>2-1/2" hydrant fill with anti-siphon air gap</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Heavy duty rear bumper</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>DOT compliant wiring and lighting</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Interior tank coating for superior protection</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Powder-coated parts</li>
+                </ul>
     <!-- Why Buy Section -->
     <section class="why-buy">
         <div class="container">
@@ -300,6 +449,9 @@
     <section class="quote-section" id="quote">
         <div class="container">
             <div class="section-header">
+                <p class="section-label">Get Started</p>
+                <h2>Request a Quote</h2>
+                <p>Tell us about your project and we'll get back to you with availability and pricing.</p>
                 <p class="section-label">Get More Info</p>
                 <h2>Request More Information</h2>
                 <p>Interested in purchasing? Complete the form below and we'll be in touch.</p>
@@ -328,6 +480,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project, location, and timeline..."></textarea>
                         <textarea id="message" name="message" placeholder="Tell us which truck you're interested in..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-large">Submit Request</button>
@@ -340,6 +493,8 @@
     <div class="cta-bar">
         <div class="container">
             <div class="cta-text">
+                <h2>Have Questions?</h2>
+                <p>Call us for immediate answers about availability and pricing.</p>
                 <h2>Ready to Buy?</h2>
                 <p>Call us to discuss pricing and availability.</p>
             </div>
