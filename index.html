@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Water Truck Rentals | Water Truck Supply | Fort Worth, TX</title>
     <meta name="description" content="Rent 4,000 gallon water trucks in Texas. Late model Freightliner M2106 trucks with GPS tracking, backup cameras, and responsive service. Request a quote today.">
+    <title>Water Trucks for Sale | Water Truck Supply | Fort Worth, TX</title>
+    <meta name="description" content="Buy quality water trucks from Water Truck Supply. Late model Freightliner M2106 4,000 gallon water trucks available. Superior quality, competitive pricing.">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -116,6 +118,36 @@
         .specs-list li { padding: var(--space-sm) 0; border-bottom: 1px solid var(--light-gray); display: flex; align-items: flex-start; gap: var(--space-sm); }
         .specs-list li:last-child { border-bottom: none; }
         .specs-list svg { width: 20px; height: 20px; fill: var(--primary-blue); flex-shrink: 0; margin-top: 2px; }
+        .page-header p { color: var(--light-gray); font-size: 1.2rem; max-width: 700px; margin: 0 auto var(--space-md); }
+        .page-header .btn { margin: 0 var(--space-xs); }
+        
+        /* Sales Section */
+        .sales-intro { padding: var(--space-2xl) 0; background: var(--white); }
+        .section-header { text-align: center; max-width: 600px; margin: 0 auto var(--space-xl); }
+        .section-label { font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-blue); margin-bottom: var(--space-sm); }
+        
+        /* Product Grid */
+        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); margin-bottom: var(--space-xl); }
+        @media (max-width: 768px) { .products-grid { grid-template-columns: 1fr; } }
+        .product-card { background: var(--off-white); border: 2px solid var(--light-gray); border-radius: var(--card-radius); overflow: hidden; transition: transform 0.15s ease; }
+        .product-card:hover { transform: scale(1.02); }
+        .product-image { aspect-ratio: 4/3; overflow: hidden; background: var(--light-gray); }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; }
+        .product-content { padding: var(--space-md); }
+        .product-content h3 { margin-bottom: var(--space-xs); }
+        .product-price { font-family: var(--font-headline); font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: var(--space-sm); }
+        .product-price .original { text-decoration: line-through; color: var(--gray); font-size: 1rem; margin-right: var(--space-xs); }
+        .product-content p { color: var(--gray); margin-bottom: var(--space-md); }
+        
+        /* Why Buy Section */
+        .why-buy { padding: var(--space-2xl) 0; background: var(--off-white); }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+        @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; } }
+        .why-card { background: var(--white); border: 2px solid var(--light-gray); border-radius: var(--card-radius); padding: var(--space-lg); transition: transform 0.15s ease; }
+        .why-card:hover { transform: scale(1.03); }
+        .why-number { font-family: var(--font-headline); font-size: 3rem; font-weight: 700; color: var(--primary-blue); line-height: 1; margin-bottom: var(--space-sm); }
+        .why-card h3 { margin-bottom: var(--space-xs); }
+        .why-card p { color: var(--gray); margin-bottom: 0; }
         
         /* Quote Form Section */
         .quote-section { padding: var(--space-2xl) 0; background: var(--black); color: var(--white); position: relative; }
@@ -253,6 +285,46 @@
                         </li>
                     </ul>
                     <a href="#quote" class="btn btn-primary">Request a Quote</a>
+            <h1>No B.S. Water Truck Sales</h1>
+            <p>We specialize in selling quality 4,000 gallon water trucks across Texas and into neighboring states. Late model, low mileage units that are professionally maintained.</p>
+            <a href="tel:8176015754" class="btn btn-primary">Give Us a Call</a>
+            <a href="#quote" class="btn btn-outline-white">Request a Quote</a>
+        </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="sales-intro">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Available Inventory</p>
+                <h2>Water Trucks for Sale</h2>
+                <p>Quality equipment ready to go to work for you.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../Water_Truck.webp" alt="2024 Freightliner M2106 Water Truck">
+                    </div>
+                    <div class="product-content">
+                        <h3>2024 Freightliner M2106 Water Truck</h3>
+                        <div class="product-price">
+                            <span class="original">$189,000</span>
+                            $185,000
+                        </div>
+                        <p>Late model 4,000 gallon water truck with low hours. GPS tracking, backup camera, automatic transmission.</p>
+                        <a href="/contact-us/" class="btn btn-primary">Inquire Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../Water_Truck.webp" alt="2024 Freightliner M2106 Plus Water Truck">
+                    </div>
+                    <div class="product-content">
+                        <h3>2024 Freightliner M2106 Plus Water Truck</h3>
+                        <div class="product-price">$192,000</div>
+                        <p>Premium 4,000 gallon water truck. Fully loaded with all options. Ready for immediate delivery.</p>
+                        <a href="/contact-us/" class="btn btn-primary">Inquire Now</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -331,6 +403,44 @@
                     <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Interior tank coating for superior protection</li>
                     <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Powder-coated parts</li>
                 </ul>
+    <!-- Why Buy Section -->
+    <section class="why-buy">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Advantage</p>
+                <h2>Why Buy From Water Truck Supply?</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-number">01</div>
+                    <h3>Superior Quality</h3>
+                    <p>We provide only the highest quality water trucks from top-tier manufacturers. Every vehicle offers robust performance and durability.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">02</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>We understand the importance of value. You'll receive a high-quality water truck at a cost-effective price.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">03</div>
+                    <h3>Expert Guidance</h3>
+                    <p>Our experienced team will work with you to understand your specific needs and guide you to the perfect truck.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">04</div>
+                    <h3>After-Sales Support</h3>
+                    <p>Our relationship extends beyond the initial sale. We offer support to ensure your vehicle performs optimally.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">05</div>
+                    <h3>Broad Selection</h3>
+                    <p>From small models for narrow job sites to large-capacity trucks for major projects, we have what you need.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">06</div>
+                    <h3>Industry Expertise</h3>
+                    <p>Because we're not a dealership, we can offer the most productive solution for your job regardless of brand.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -342,6 +452,9 @@
                 <p class="section-label">Get Started</p>
                 <h2>Request a Quote</h2>
                 <p>Tell us about your project and we'll get back to you with availability and pricing.</p>
+                <p class="section-label">Get More Info</p>
+                <h2>Request More Information</h2>
+                <p>Interested in purchasing? Complete the form below and we'll be in touch.</p>
             </div>
             <div class="quote-form">
                 <form action="#" method="POST">
@@ -368,6 +481,7 @@
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Tell us about your project, location, and timeline..."></textarea>
+                        <textarea id="message" name="message" placeholder="Tell us which truck you're interested in..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-large">Submit Request</button>
                 </form>
@@ -381,6 +495,8 @@
             <div class="cta-text">
                 <h2>Have Questions?</h2>
                 <p>Call us for immediate answers about availability and pricing.</p>
+                <h2>Ready to Buy?</h2>
+                <p>Call us to discuss pricing and availability.</p>
             </div>
             <div class="cta-phone">
                 <a href="tel:8176015754">(817) 601-5754</a>
