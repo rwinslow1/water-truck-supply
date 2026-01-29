@@ -3,1363 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Truck Supply | No B.S. Water Truck Rentals | Fort Worth, TX</title>
-    <meta name="description" content="Water Truck Supply offers reliable 4,000 gallon water truck rentals in Texas. Late model fleet, professional service, honest communication. Call (817) 601-5754.">
+    <title>Water Truck Rentals | Water Truck Supply | Fort Worth, TX</title>
+    <meta name="description" content="Rent 4,000 gallon water trucks in Texas. Late model Freightliner M2106 trucks with GPS tracking, backup cameras, and responsive service. Request a quote today.">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* ============================================
-           WATER TRUCK SUPPLY - BRAND STYLES
-           ============================================ */
-        
         :root {
-            /* Primary Colors */
             --primary-blue: #0066CC;
             --primary-dark: #004C99;
             --primary-light: #3399FF;
-            
-            /* Neutrals */
             --black: #0A0A0A;
             --charcoal: #2D2D2D;
             --gray: #6B7280;
             --light-gray: #E5E7EB;
             --off-white: #F8F9FA;
             --white: #FFFFFF;
-            
-            /* Spacing Scale */
             --space-xs: 8px;
             --space-sm: 16px;
             --space-md: 24px;
             --space-lg: 40px;
             --space-xl: 60px;
             --space-2xl: 80px;
-            
-            /* Typography */
             --font-headline: 'Oswald', sans-serif;
             --font-body: 'Source Sans 3', sans-serif;
-            
-            /* Layout */
             --max-width: 1200px;
             --border-radius: 5px;
             --card-radius: 8px;
         }
         
-        /* Reset & Base */
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: var(--font-body);
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--charcoal);
-            background: var(--white);
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        /* Noise Texture Overlay */
-        .noise-texture::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.05;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 var(--space-lg);
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-        }
-        
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-headline);
-            font-weight: 700;
-            text-transform: uppercase;
-            color: var(--black);
-            line-height: 1.1;
-        }
-        
-        h1 {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            letter-spacing: 2px;
-        }
-        
-        h2 {
-            font-size: clamp(1.75rem, 4vw, 2.25rem);
-            font-weight: 600;
-        }
-        
-        h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        
-        p {
-            margin-bottom: var(--space-sm);
-        }
-        
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            border-radius: var(--border-radius);
-            font-family: var(--font-headline);
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.15s ease;
-        }
-        
-        .btn:hover {
-            transform: scale(1.05);
-        }
-        
-        .btn-primary {
-            background: var(--primary-blue);
-            color: var(--white);
-        }
-        
-        .btn-dark {
-            background: var(--black);
-            color: var(--white);
-        }
-        
-        .btn-outline {
-            background: transparent;
-            border: 2px solid var(--black);
-            color: var(--black);
-            padding: 12px 26px;
-        }
-        
-        .btn-outline-white {
-            background: transparent;
-            border: 2px solid var(--white);
-            color: var(--white);
-            padding: 12px 26px;
-        }
-        
-        .btn-large {
-            padding: 18px 36px;
-            font-size: 1.1rem;
-        }
-        
-        /* ============================================
-           UTILITY BAR
-           ============================================ */
-        .utility-bar {
-            background: var(--primary-blue);
-            color: var(--white);
-            padding: 10px 0;
-            position: relative;
-        }
-        
-        .utility-bar .container {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: var(--space-md);
-        }
-        
-        .utility-bar a {
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: opacity 0.15s ease;
-        }
-        
-        .utility-bar a:hover {
-            opacity: 0.8;
-        }
-        
-        .utility-bar svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
-        
-        /* ============================================
-           MAIN NAVIGATION
-           ============================================ */
-        .main-nav {
-            position: absolute;
-            top: 44px;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 20px 0;
-            transition: all 0.3s ease;
-            background: linear-gradient(180deg, rgba(10,10,10,0.7) 0%, rgba(10,10,10,0.3) 70%, transparent 100%);
-        }
-        
-        .main-nav.scrolled {
-            position: fixed;
-            top: 0;
-            background: var(--black);
-            padding: 15px 0;
-        }
-        
-        .main-nav.scrolled::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.05;
-            pointer-events: none;
-        }
-        
-        .main-nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .logo {
-            display: block;
-            transition: transform 0.15s ease;
-        }
-        
-        .logo:hover {
-            transform: scale(1.02);
-        }
-        
-        .logo img {
-            height: 45px;
-            width: auto;
-        }
-        
-        .footer-brand .logo img {
-            height: 50px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: var(--space-lg);
-            list-style: none;
-        }
-        
-        .nav-links a {
-            font-family: var(--font-headline);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--white);
-            transition: transform 0.15s ease, color 0.15s ease;
-            display: inline-block;
-        }
-        
-        .nav-links a:hover {
-            transform: scale(1.08);
-            color: var(--primary-light);
-        }
-        
-        .nav-cta {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        
-        .nav-phone {
-            font-family: var(--font-headline);
-            font-weight: 600;
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            gap: var(--space-xs);
-        }
-        
-        .nav-phone svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--primary-blue);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 8px;
-        }
-        
-        .mobile-menu-btn span {
-            display: block;
-            width: 24px;
-            height: 2px;
-            background: var(--white);
-            margin: 6px 0;
-            transition: 0.3s;
-        }
-        
-        @media (max-width: 900px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-phone {
-                display: none;
-            }
-        }
-        
-        /* ============================================
-           HERO SECTION
-           ============================================ */
-        .hero {
-            position: relative;
-            background: var(--black);
-            color: var(--white);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-        
-        .hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            transform: translate(-50%, -50%);
-            z-index: 0;
-            object-fit: cover;
-        }
-        
-        .hero-video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(10,10,10,0.6) 0%, rgba(10,10,10,0.45) 50%, rgba(10,10,10,0.35) 100%);
-            z-index: 1;
-        }
-        
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.08;
-            pointer-events: none;
-            z-index: 2;
-        }
-        
-        .hero-bg-shape {
-            position: absolute;
-            right: -10%;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 60%;
-            height: 120%;
-            background: var(--primary-blue);
-            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-            opacity: 0.15;
-            z-index: 2;
-        }
-        
-        .hero .container {
-            position: relative;
-            z-index: 3;
-            padding-top: 120px;
-            padding-bottom: var(--space-2xl);
-        }
-        
-        .hero-content {
-            max-width: 700px;
-        }
-        
-        .hero-tagline {
-            font-family: var(--font-headline);
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary-blue);
-            margin-bottom: var(--space-sm);
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-        
-        .hero-reviews-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--white);
-            text-decoration: none;
-            transition: transform 0.15s ease;
-        }
-        
-        .hero-reviews-link:hover {
-            transform: scale(1.05);
-        }
-        
-        .hero-google-icon {
-            width: 20px;
-            height: 20px;
-        }
-        
-        .hero-stars {
-            display: inline-flex;
-            gap: 2px;
-        }
-        
-        .hero-stars svg {
-            width: 18px;
-            height: 18px;
-            fill: #FBBC04;
-        }
-        
-        .hero h1 {
-            color: var(--white);
-            margin-bottom: var(--space-md);
-            opacity: 0;
-            animation: fadeInUp 0.6s ease 0.15s forwards;
-        }
-        
-        .hero-description {
-            font-size: 1.25rem;
-            color: var(--light-gray);
-            margin-bottom: var(--space-lg);
-            max-width: 550px;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease 0.3s forwards;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: var(--space-sm);
-            flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease 0.45s forwards;
-        }
-        
-        .hero-stats {
-            display: flex;
-            gap: var(--space-xl);
-            margin-top: var(--space-xl);
-            padding-top: var(--space-lg);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            opacity: 0;
-            animation: fadeInUp 0.6s ease 0.6s forwards;
-        }
-        
-        .hero-stat {
-            text-align: left;
-        }
-        
-        .hero-stat-number {
-            font-family: var(--font-headline);
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            line-height: 1;
-        }
-        
-        .hero-stat-label {
-            font-family: var(--font-headline);
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--gray);
-            margin-top: var(--space-xs);
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-stats {
-                flex-direction: column;
-                gap: var(--space-md);
-            }
-        }
-        
-        /* ============================================
-           FEATURES SECTION
-           ============================================ */
-        .features {
-            padding: var(--space-2xl) 0;
-            background: var(--off-white);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto var(--space-xl);
-        }
-        
-        .section-label {
-            font-family: var(--font-headline);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--primary-blue);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .section-header h2 {
-            margin-bottom: var(--space-sm);
-        }
-        
-        .section-header p {
-            color: var(--gray);
-            font-size: 1.1rem;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-        }
-        
-        @media (max-width: 900px) {
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .feature-card {
-            background: var(--white);
-            border: 2px solid var(--light-gray);
-            border-radius: var(--card-radius);
-            padding: var(--space-md);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
-        }
-        
-        .feature-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--primary-blue);
-            border-radius: var(--card-radius);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .feature-icon svg {
-            width: 26px;
-            height: 26px;
-            stroke: var(--white);
-            fill: none;
-            stroke-width: 2;
-        }
-        
-        .feature-card h3 {
-            margin-bottom: var(--space-xs);
-        }
-        
-        .feature-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 0;
-            line-height: 1.5;
-        }
-        
-        /* ============================================
-           SERVICES SECTION
-           ============================================ */
-        .services {
-            padding: var(--space-2xl) 0;
-            background: var(--white);
-        }
-        
-        .services-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-            align-items: center;
-        }
-        
-        @media (max-width: 900px) {
-            .services-content {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .services-text {
-            max-width: 500px;
-        }
-        
-        .services-text .section-label {
-            text-align: left;
-        }
-        
-        .services-text h2 {
-            text-align: left;
-            margin-bottom: var(--space-md);
-        }
-        
-        .services-text p {
-            color: var(--charcoal);
-            margin-bottom: var(--space-md);
-        }
-        
-        .services-list {
-            list-style: none;
-            margin-bottom: var(--space-lg);
-        }
-        
-        .services-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-sm);
-            font-weight: 600;
-        }
-        
-        .services-list svg {
-            width: 22px;
-            height: 22px;
-            fill: var(--primary-blue);
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-        
-        .services-image {
-            position: relative;
-            border-radius: var(--card-radius);
-            overflow: hidden;
-            aspect-ratio: 4/3;
-        }
-        
-        .services-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* ============================================
-           SERVICE AREAS SECTION
-           ============================================ */
-        .areas {
-            padding: var(--space-2xl) 0;
-            background: var(--black);
-            color: var(--white);
-            position: relative;
-        }
-        
-        .areas::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.05;
-            pointer-events: none;
-        }
-        
-        .areas .container {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .areas .section-header {
-            margin-bottom: var(--space-lg);
-        }
-        
-        .areas .section-header h2 {
-            color: var(--white);
-        }
-        
-        .areas .section-header p {
-            color: var(--light-gray);
-        }
-        
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: var(--space-md);
-        }
-        
-        @media (max-width: 900px) {
-            .areas-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        .area-card {
-            background: var(--charcoal);
-            border-radius: var(--card-radius);
-            padding: var(--space-md);
-            text-align: center;
-            transition: transform 0.15s ease;
-        }
-        
-        .area-card:hover {
-            transform: scale(1.03);
-        }
-        
-        .area-card svg {
-            width: 32px;
-            height: 32px;
-            fill: var(--primary-blue);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .area-card h3 {
-            color: var(--white);
-            font-size: 1.1rem;
-            margin-bottom: var(--space-xs);
-        }
-        
-        .area-card p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-        
-        /* ============================================
-           REVIEWS SECTION
-           ============================================ */
-        .reviews {
-            padding: var(--space-2xl) 0;
-            background: var(--white);
-        }
-        
-        .reviews-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: var(--space-lg);
-            flex-wrap: wrap;
-            gap: var(--space-md);
-        }
-        
-        .reviews-header .section-label,
-        .reviews-header h2 {
-            text-align: left;
-        }
-        
-        .google-rating {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            background: var(--off-white);
-            padding: 12px 20px;
-            border-radius: var(--card-radius);
-            border: 2px solid var(--light-gray);
-        }
-        
-        .google-logo {
-            height: 24px;
-            width: auto;
-        }
-        
-        .google-rating-score {
-            font-family: var(--font-headline);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--black);
-        }
-        
-        .google-stars {
-            display: flex;
-            gap: 2px;
-        }
-        
-        .google-stars svg {
-            width: 20px;
-            height: 20px;
-            fill: #FBBC04;
-        }
-        
-        .google-rating-count {
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-        
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-md);
-            margin-bottom: var(--space-lg);
-        }
-        
-        @media (max-width: 900px) {
-            .reviews-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .review-card {
-            background: var(--off-white);
-            border: 2px solid var(--light-gray);
-            border-radius: var(--card-radius);
-            padding: var(--space-md);
-            transition: transform 0.15s ease;
-        }
-        
-        .review-card:hover {
-            transform: scale(1.02);
-        }
-        
-        .review-header {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-sm);
-        }
-        
-        .review-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--primary-blue);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-headline);
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--white);
-            flex-shrink: 0;
-        }
-        
-        .review-author {
-            flex: 1;
-        }
-        
-        .review-author-name {
-            font-family: var(--font-headline);
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: var(--black);
-            margin-bottom: 2px;
-        }
-        
-        .review-date {
-            font-size: 0.85rem;
-            color: var(--gray);
-        }
-        
-        .review-stars {
-            display: flex;
-            gap: 2px;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .review-stars svg {
-            width: 18px;
-            height: 18px;
-            fill: #FBBC04;
-        }
-        
-        .review-text {
-            font-size: 0.95rem;
-            color: var(--charcoal);
-            line-height: 1.6;
-            margin-bottom: 0;
-        }
-        
-        .review-text::before {
-            content: '"';
-        }
-        
-        .review-text::after {
-            content: '"';
-        }
-        
-        .reviews-cta {
-            text-align: center;
-        }
-        
-        .btn-google {
-            background: var(--white);
-            border: 2px solid var(--light-gray);
-            color: var(--charcoal);
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-sm);
-            padding: 14px 28px;
-        }
-        
-        .btn-google:hover {
-            border-color: var(--primary-blue);
-            color: var(--black);
-        }
-        
-        .btn-google svg {
-            width: 20px;
-            height: 20px;
-        }
-        
-        /* ============================================
-           WHY CHOOSE US
-           ============================================ */
-        .why-us {
-            padding: var(--space-2xl) 0;
-            background: var(--off-white);
-        }
-        
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-md);
-        }
-        
-        @media (max-width: 768px) {
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .why-card {
-            background: var(--white);
-            border: 2px solid var(--light-gray);
-            border-radius: var(--card-radius);
-            padding: var(--space-lg);
-            display: flex;
-            gap: var(--space-md);
-            transition: transform 0.15s ease;
-        }
-        
-        .why-card:hover {
-            transform: scale(1.02);
-        }
-        
-        .why-number {
-            font-family: var(--font-headline);
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--light-gray);
-            line-height: 1;
-            flex-shrink: 0;
-        }
-        
-        .why-card h3 {
-            margin-bottom: var(--space-xs);
-        }
-        
-        .why-card p {
-            color: var(--gray);
-            margin-bottom: 0;
-        }
-        
-        /* ============================================
-           CONTACT SECTION
-           ============================================ */
-        .contact {
-            padding: var(--space-2xl) 0;
-            background: var(--white);
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-xl);
-        }
-        
-        @media (max-width: 900px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .contact-info .section-label {
-            text-align: left;
-        }
-        
-        .contact-info h2 {
-            text-align: left;
-            margin-bottom: var(--space-md);
-        }
-        
-        .contact-info > p {
-            color: var(--charcoal);
-            margin-bottom: var(--space-lg);
-        }
-        
-        .contact-details {
-            list-style: none;
-        }
-        
-        .contact-details li {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-            margin-bottom: var(--space-md);
-            font-size: 1.1rem;
-        }
-        
-        .contact-details svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--primary-blue);
-            flex-shrink: 0;
-        }
-        
-        .contact-details a {
-            color: var(--black);
-            font-weight: 600;
-            transition: color 0.15s ease;
-        }
-        
-        .contact-details a:hover {
-            color: var(--primary-blue);
-        }
-        
-        .contact-form {
-            background: var(--off-white);
-            border-radius: var(--card-radius);
-            padding: var(--space-lg);
-        }
-        
-        .form-group {
-            margin-bottom: var(--space-sm);
-        }
-        
-        .form-group label {
-            display: block;
-            font-family: var(--font-headline);
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: var(--charcoal);
-            margin-bottom: var(--space-xs);
-        }
-        
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 14px 16px;
-            border: 2px solid var(--charcoal);
-            border-radius: var(--border-radius);
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            color: var(--black);
-            background: var(--white);
-            transition: border-color 0.15s ease;
-        }
-        
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-blue);
-        }
-        
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: var(--gray);
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-        
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-sm);
-        }
-        
-        @media (max-width: 500px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .contact-form .btn {
-            width: 100%;
-            margin-top: var(--space-sm);
-        }
-        
-        /* ============================================
-           CTA BAR
-           ============================================ */
-        .cta-bar {
-            background: var(--primary-blue);
-            padding: var(--space-lg) 0;
-            position: relative;
-        }
-        
-        .cta-bar::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.05;
-            pointer-events: none;
-        }
-        
-        .cta-bar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: var(--space-md);
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .cta-text h2 {
-            color: var(--white);
-            margin-bottom: 4px;
-        }
-        
-        .cta-text p {
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 0;
-            font-size: 1.1rem;
-        }
-        
-        .cta-phone {
-            display: flex;
-            align-items: center;
-            gap: var(--space-sm);
-        }
-        
-        .cta-phone a {
-            font-family: var(--font-headline);
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--white);
-            transition: transform 0.15s ease;
-            display: inline-block;
-        }
-        
-        .cta-phone a:hover {
-            transform: scale(1.05);
-        }
-        
-        @media (max-width: 768px) {
-            .cta-bar .container {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-        
-        /* ============================================
-           FOOTER
-           ============================================ */
-        .footer {
-            background: var(--black);
-            color: var(--white);
-            padding: var(--space-xl) 0 var(--space-lg);
-            position: relative;
-        }
-        
-        .footer::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-            opacity: 0.05;
-            pointer-events: none;
-        }
-        
-        .footer .container {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: var(--space-xl);
-            margin-bottom: var(--space-lg);
-        }
-        
-        @media (max-width: 900px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
-        @media (max-width: 500px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .footer-brand .logo {
-            margin-bottom: var(--space-sm);
-            display: inline-block;
-        }
-        
-        .footer-brand p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: var(--space-md);
-        }
-        
-        .footer-heading {
-            font-family: var(--font-headline);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--white);
-            margin-bottom: var(--space-md);
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: var(--space-xs);
-        }
-        
-        .footer-links a {
-            color: var(--gray);
-            font-size: 0.95rem;
-            transition: color 0.15s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary-blue);
-        }
-        
-        .footer-contact li {
-            display: flex;
-            align-items: flex-start;
-            gap: var(--space-xs);
-            color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: var(--space-sm);
-        }
-        
-        .footer-contact svg {
-            width: 18px;
-            height: 18px;
-            fill: var(--primary-blue);
-            flex-shrink: 0;
-            margin-top: 3px;
-        }
-        
-        .footer-contact a {
-            color: var(--gray);
-            transition: color 0.15s ease;
-        }
-        
-        .footer-contact a:hover {
-            color: var(--primary-blue);
-        }
-        
-        .footer-bottom {
-            padding-top: var(--space-lg);
-            border-top: 1px solid var(--charcoal);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: var(--space-sm);
-        }
-        
-        .footer-bottom p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-        
-        .footer-legal {
-            display: flex;
-            gap: var(--space-md);
-        }
-        
-        .footer-legal a {
-            color: var(--gray);
-            font-size: 0.9rem;
-            transition: color 0.15s ease;
-        }
-        
-        .footer-legal a:hover {
-            color: var(--white);
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--charcoal); background: var(--white); }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        
+        .container { width: 100%; max-width: var(--max-width); margin: 0 auto; padding: 0 var(--space-lg); }
+        @media (max-width: 768px) { .container { padding: 0 20px; } }
+        
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-headline); font-weight: 700; text-transform: uppercase; color: var(--black); line-height: 1.1; }
+        h1 { font-size: clamp(2.5rem, 6vw, 4rem); letter-spacing: 2px; }
+        h2 { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 600; }
+        h3 { font-size: 1.25rem; font-weight: 600; letter-spacing: 0.5px; }
+        p { margin-bottom: var(--space-sm); }
+        
+        .btn { display: inline-block; padding: 14px 28px; border-radius: var(--border-radius); font-family: var(--font-headline); font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.15s ease; }
+        .btn:hover { transform: scale(1.05); }
+        .btn-primary { background: var(--primary-blue); color: var(--white); }
+        .btn-dark { background: var(--black); color: var(--white); }
+        .btn-outline { background: transparent; border: 2px solid var(--black); color: var(--black); padding: 12px 26px; }
+        .btn-large { padding: 18px 36px; font-size: 1.1rem; }
+        
+        /* Utility Bar */
+        .utility-bar { background: var(--primary-blue); color: var(--white); padding: 10px 0; }
+        .utility-bar .container { display: flex; justify-content: flex-end; align-items: center; gap: var(--space-md); }
+        .utility-bar a { display: flex; align-items: center; gap: var(--space-xs); font-size: 0.9rem; font-weight: 600; transition: opacity 0.15s ease; }
+        .utility-bar a:hover { opacity: 0.8; }
+        .utility-bar svg { width: 16px; height: 16px; fill: currentColor; }
+        
+        /* Navigation */
+        .main-nav { background: var(--black); padding: 15px 0; position: relative; }
+        .main-nav::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .main-nav .container { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 2; }
+        .logo { display: block; transition: transform 0.15s ease; }
+        .logo:hover { transform: scale(1.02); }
+        .logo img { height: 45px; width: auto; }
+        .nav-links { display: flex; gap: var(--space-lg); list-style: none; }
+        .nav-links a { font-family: var(--font-headline); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--white); transition: transform 0.15s ease, color 0.15s ease; display: inline-block; }
+        .nav-links a:hover { transform: scale(1.08); color: var(--primary-light); }
+        .nav-cta { display: flex; align-items: center; gap: var(--space-sm); }
+        .nav-phone { font-family: var(--font-headline); font-weight: 600; color: var(--white); display: flex; align-items: center; gap: var(--space-xs); }
+        .nav-phone svg { width: 18px; height: 18px; fill: var(--primary-blue); }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--white); margin: 6px 0; }
+        @media (max-width: 900px) { .nav-links { display: none; } .mobile-menu-btn { display: block; } .nav-phone { display: none; } }
+        
+        /* Page Header */
+        .page-header { background: var(--black); color: var(--white); padding: var(--space-2xl) 0; position: relative; text-align: center; }
+        .page-header::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .page-header .container { position: relative; z-index: 2; }
+        .page-header h1 { color: var(--white); margin-bottom: var(--space-sm); }
+        .page-header p { color: var(--light-gray); font-size: 1.2rem; max-width: 700px; margin: 0 auto; }
+        
+        /* Rental Intro */
+        .rental-intro { padding: var(--space-2xl) 0; background: var(--white); }
+        .rental-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); align-items: center; }
+        @media (max-width: 900px) { .rental-grid { grid-template-columns: 1fr; } }
+        .rental-image { border-radius: var(--card-radius); overflow: hidden; }
+        .rental-image img { width: 100%; height: 100%; object-fit: cover; }
+        .rental-content h2 { margin-bottom: var(--space-md); }
+        .rental-content p { color: var(--charcoal); margin-bottom: var(--space-md); }
+        .rental-features { list-style: none; margin-bottom: var(--space-lg); }
+        .rental-features li { display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm); font-weight: 600; }
+        .rental-features svg { width: 22px; height: 22px; fill: var(--primary-blue); flex-shrink: 0; }
+        
+        /* Specs Section */
+        .specs { padding: var(--space-2xl) 0; background: var(--off-white); }
+        .section-header { text-align: center; max-width: 600px; margin: 0 auto var(--space-xl); }
+        .section-label { font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-blue); margin-bottom: var(--space-sm); }
+        .specs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+        @media (max-width: 900px) { .specs-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .specs-grid { grid-template-columns: 1fr; } }
+        .spec-card { background: var(--white); border: 2px solid var(--light-gray); border-radius: var(--card-radius); padding: var(--space-md); text-align: center; transition: transform 0.15s ease; }
+        .spec-card:hover { transform: scale(1.03); }
+        .spec-card svg { width: 40px; height: 40px; fill: var(--primary-blue); margin-bottom: var(--space-sm); }
+        .spec-card h3 { margin-bottom: var(--space-xs); font-size: 1.1rem; }
+        .spec-card p { color: var(--gray); font-size: 0.95rem; margin-bottom: 0; }
+        
+        /* Full Specs */
+        .full-specs { padding: var(--space-2xl) 0; background: var(--white); }
+        .specs-columns { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-xl); }
+        @media (max-width: 768px) { .specs-columns { grid-template-columns: 1fr; } }
+        .specs-list { list-style: none; }
+        .specs-list li { padding: var(--space-sm) 0; border-bottom: 1px solid var(--light-gray); display: flex; align-items: flex-start; gap: var(--space-sm); }
+        .specs-list li:last-child { border-bottom: none; }
+        .specs-list svg { width: 20px; height: 20px; fill: var(--primary-blue); flex-shrink: 0; margin-top: 2px; }
+        
+        /* Quote Form Section */
+        .quote-section { padding: var(--space-2xl) 0; background: var(--black); color: var(--white); position: relative; }
+        .quote-section::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .quote-section .container { position: relative; z-index: 2; }
+        .quote-section .section-header h2 { color: var(--white); }
+        .quote-section .section-header p { color: var(--light-gray); }
+        .quote-form { max-width: 600px; margin: 0 auto; background: var(--charcoal); border-radius: var(--card-radius); padding: var(--space-lg); }
+        .form-group { margin-bottom: var(--space-sm); }
+        .form-group label { display: block; font-family: var(--font-headline); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--white); margin-bottom: var(--space-xs); }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 16px; border: 2px solid var(--gray); border-radius: var(--border-radius); font-family: var(--font-body); font-size: 0.95rem; color: var(--white); background: var(--black); transition: border-color 0.15s ease; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary-blue); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--gray); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+        @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+        .quote-form .btn { width: 100%; margin-top: var(--space-sm); }
+        
+        /* CTA Bar */
+        .cta-bar { background: var(--primary-blue); padding: var(--space-lg) 0; position: relative; }
+        .cta-bar::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .cta-bar .container { display: flex; justify-content: space-between; align-items: center; gap: var(--space-md); flex-wrap: wrap; position: relative; z-index: 2; }
+        .cta-text h2 { color: var(--white); margin-bottom: 4px; }
+        .cta-text p { color: rgba(255,255,255,0.9); margin-bottom: 0; font-size: 1.1rem; }
+        .cta-phone a { font-family: var(--font-headline); font-size: 1.75rem; font-weight: 700; color: var(--white); transition: transform 0.15s ease; display: inline-block; }
+        .cta-phone a:hover { transform: scale(1.05); }
+        @media (max-width: 768px) { .cta-bar .container { flex-direction: column; text-align: center; } }
+        
+        /* Footer */
+        .footer { background: var(--black); color: var(--white); padding: var(--space-xl) 0 var(--space-lg); position: relative; }
+        .footer::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .footer .container { position: relative; z-index: 2; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-xl); margin-bottom: var(--space-lg); }
+        @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+        .footer-brand .logo { margin-bottom: var(--space-sm); display: inline-block; }
+        .footer-brand .logo img { height: 50px; }
+        .footer-brand p { color: var(--gray); font-size: 0.95rem; margin-bottom: var(--space-md); }
+        .footer-heading { font-family: var(--font-headline); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--white); margin-bottom: var(--space-md); }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: var(--space-xs); }
+        .footer-links a { color: var(--gray); font-size: 0.95rem; transition: color 0.15s ease; }
+        .footer-links a:hover { color: var(--primary-blue); }
+        .footer-contact li { display: flex; align-items: flex-start; gap: var(--space-xs); color: var(--gray); font-size: 0.95rem; margin-bottom: var(--space-sm); }
+        .footer-contact svg { width: 18px; height: 18px; fill: var(--primary-blue); flex-shrink: 0; margin-top: 3px; }
+        .footer-contact a { color: var(--gray); transition: color 0.15s ease; }
+        .footer-contact a:hover { color: var(--primary-blue); }
+        .footer-bottom { padding-top: var(--space-lg); border-top: 1px solid var(--charcoal); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-sm); }
+        .footer-bottom p { color: var(--gray); font-size: 0.9rem; margin-bottom: 0; }
+        .footer-legal { display: flex; gap: var(--space-md); }
+        .footer-legal a { color: var(--gray); font-size: 0.9rem; transition: color 0.15s ease; }
+        .footer-legal a:hover { color: var(--white); }
     </style>
 </head>
 <body>
     <!-- Utility Bar -->
     <div class="utility-bar">
         <div class="container">
-            <a href="/cdn-cgi/l/email-protection#325b5c545d7245534657404640475159414742425e4b1c515d5f">
+            <a href="mailto:howdy@watertrucksupply.com">
                 <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                <span class="__cf_email__" data-cfemail="e68f888089a69187928394929493858d959396968a9fc885898b">[email&#160;protected]</span>
+                howdy@watertrucksupply.com
             </a>
             <a href="tel:8176015754">
                 <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
@@ -1368,10 +185,10 @@
         </div>
     </div>
     
-    <!-- Main Navigation -->
-    <nav class="main-nav" id="mainNav">
+    <!-- Navigation -->
+    <nav class="main-nav">
         <div class="container">
-            <a href="#" class="logo"><img src="Water_Truck_Supply_Logo.png" alt="Water Truck Supply"></a>
+            <a href="/" class="logo"><img src="../Water_Truck_Supply_Logo.png" alt="Water Truck Supply"></a>
             <ul class="nav-links">
                 <li><a href="/about-us/">About</a></li>
                 <li><a href="/water-trucks-for-rent/">Rentals</a></li>
@@ -1394,339 +211,166 @@
         </div>
     </nav>
     
-    <!-- Hero Section -->
-    <section class="hero">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="Water-Truck_video.mov" type="video/quicktime">
-            <source src="Water-Truck_video.mov" type="video/mp4">
-        </video>
-        <div class="hero-video-overlay"></div>
-        <div class="hero-bg-shape"></div>
+    <!-- Page Header -->
+    <section class="page-header">
         <div class="container">
-            <div class="hero-content">
-                <p class="hero-tagline">
-                    <a href="#reviews" class="hero-reviews-link">
-                        Read our reviews on 
-                        <svg class="hero-google-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                        </svg>
-                        <span class="hero-stars">
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        </span>
-                    </a>
-                </p>
-                <h1>No B.S. Water Truck Rentals</h1>
-                <p class="hero-description">Located in Fort Worth, TX, we specialize in 4,000 gallon water trucks for compaction, dust control, and road building. Late model fleet. Professional service. Straight answers.</p>
-                <div class="hero-buttons">
-                    <a href="tel:8176015754" class="btn btn-primary btn-large">Call (817) 601-5754</a>
-                    <a href="#contact" class="btn btn-outline-white btn-large">Request Quote</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">5.0</div>
-                        <div class="hero-stat-label">Google Rating</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">24/7</div>
-                        <div class="hero-stat-label">Support Available</div>
-                    </div>
-                    <div class="hero-stat">
-                        <div class="hero-stat-number">Texas</div>
-                        <div class="hero-stat-label">And Neighboring States</div>
-                    </div>
-                </div>
-            </div>
+            <h1>Water Truck Rentals</h1>
+            <p>Whether you need a single water truck for a one-time project or several units on an ongoing basis, we're here to help. Our fleet consists of late model water trucks with low hours.</p>
         </div>
     </section>
     
-    <!-- Features Section -->
-    <section class="features" id="services">
+    <!-- Rental Intro -->
+    <section class="rental-intro">
         <div class="container">
-            <div class="section-header">
-                <p class="section-label">Why Work With Us</p>
-                <h2>Built for the Jobsite</h2>
-                <p>We know contractors don't have time for runaround. Here's what you can expect from Water Truck Supply.</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                    </div>
-                    <h3>Modern Fleet</h3>
-                    <p>Late model, low mileage trucks professionally maintained and serviced. No junk.</p>
+            <div class="rental-grid">
+                <div class="rental-image">
+                    <img src="../Water_Truck.webp" alt="Water Truck Supply - 4,000 Gallon Water Truck">
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                    </div>
-                    <h3>Fast Response</h3>
-                    <p>If something goes wrong on your jobsite, we dispatch a tech ASAP. No excuses.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-                    </div>
-                    <h3>Honest Answers</h3>
-                    <p>Straight talk about availability, pricing, and what we can deliver. No runaround.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
-                    </div>
-                    <h3>Flexible Terms</h3>
-                    <p>Daily, weekly, or monthly rentals. We work around your project timeline.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </div>
-                    <h3>We Deliver</h3>
-                    <p>Truck delivery and pickup across Texas and neighboring states. On your schedule.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                    </div>
-                    <h3>Diligently Serviced</h3>
-                    <p>Every truck is professionally maintained on a strict schedule. We prevent problems, not react to them.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Services Section -->
-    <section class="services" id="fleet">
-        <div class="container">
-            <div class="services-content">
-                <div class="services-text">
-                    <p class="section-label">Our Fleet</p>
-                    <h2>The Most Versatile Option</h2>
-                    <p>Our 4,000 gallon water trucks are the workhorses of any construction site. Big enough to get the job done, maneuverable enough to work in tight spaces.</p>
-                    <ul class="services-list">
+                <div class="rental-content">
+                    <h2>Your Texas Water Truck Supplier</h2>
+                    <p>Water trucks from Water Truck Supply are used on a variety of projects including compaction, dust control, agriculture, fire suppression, and soil stabilization. We have one of the newest fleets in the region!</p>
+                    <h3>Rental Features</h3>
+                    <ul class="rental-features">
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            Soil compaction for foundations & roads
+                            GPS Tracking
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            Dust control on jobsites & haul roads
+                            Managed PM Services
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            Road building & maintenance
+                            176 Hour Month
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            Fire suppression & emergency response
+                            Late Model Fleet
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            Landscaping & site preparation
+                            Responsive Service
                         </li>
                     </ul>
-                    <a href="#contact" class="btn btn-dark">Check Availability</a>
-                </div>
-                <div class="services-image">
-                    <img src="Water_Truck.webp" alt="Water Truck Supply - 4,000 Gallon Water Truck">
+                    <a href="#quote" class="btn btn-primary">Request a Quote</a>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Service Areas Section -->
-    <section class="areas" id="areas">
+    <!-- Specs Highlights -->
+    <section class="specs">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Where We Serve</p>
-                <h2>Texas & Beyond</h2>
-                <p>Based in Fort Worth, we provide water truck rentals across Texas and into neighboring states.</p>
+                <p class="section-label">Our Fleet</p>
+                <h2>Water Truck Specifications</h2>
+                <p>Freightliner M2106 chassis equipped for maximum productivity on the jobsite.</p>
             </div>
-            <div class="areas-grid">
-                <div class="area-card">
-                    <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <h3>DFW Metroplex</h3>
-                    <p>Same-day delivery available</p>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    <h3>300 HP Cummins L9</h3>
+                    <p>Powerful and reliable engine</p>
                 </div>
-                <div class="area-card">
-                    <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <h3>North Texas</h3>
-                    <p>Wichita Falls to Texarkana</p>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+                    <h3>Allison 3500 Auto</h3>
+                    <p>Automatic transmission</p>
                 </div>
-                <div class="area-card">
-                    <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <h3>Central Texas</h3>
-                    <p>Austin, Waco, Temple area</p>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                    <h3>4,000 Gallon Tank</h3>
+                    <p>ASTM A36 steel construction</p>
                 </div>
-                <div class="area-card">
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                    <h3>Backup Camera</h3>
+                    <p>Enhanced visibility and safety</p>
+                </div>
+                <div class="spec-card">
                     <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    <h3>Neighboring States</h3>
-                    <p>OK, AR, LA, NM — call us</p>
+                    <h3>GPS Tracking</h3>
+                    <p>Fleet management included</p>
+                </div>
+                <div class="spec-card">
+                    <svg viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <h3>Locking Differentials</h3>
+                    <p>Off-road capability</p>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Reviews Section -->
-    <section class="reviews" id="reviews">
-        <div class="container">
-            <div class="reviews-header">
-                <div>
-                    <p class="section-label">Customer Reviews</p>
-                    <h2>What Our Clients Say</h2>
-                </div>
-                <div class="google-rating">
-                    <svg class="google-logo" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                    </svg>
-                    <span class="google-rating-score" id="googleRating">5.0</span>
-                    <div class="google-stars">
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                    </div>
-                    <span class="google-rating-count" id="reviewCount">on Google</span>
-                </div>
-            </div>
-            
-            <!-- Reviews Container - Populated by Google Places API or Widget -->
-            <div class="reviews-grid" id="reviewsContainer">
-                <!-- Reviews will be loaded dynamically -->
-                <!-- Fallback static reviews shown if API unavailable -->
-            </div>
-            
-            <div class="reviews-cta">
-                <a href="https://search.google.com/local/writereview?placeid=ChIJs8Cu5GHRTYYRaxxD-xjaHxI" target="_blank" rel="noopener" class="btn btn-google">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                    </svg>
-                    Write a Review on Google
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Why Choose Us Section -->
-    <section class="why-us" id="about">
+    <!-- Full Specs -->
+    <section class="full-specs">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">The Water Truck Supply Difference</p>
-                <h2>What Sets Us Apart</h2>
-                <p>We're not just another equipment rental company. We're specialists who understand your needs.</p>
+                <p class="section-label">Complete Details</p>
+                <h2>Full Equipment Specifications</h2>
             </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-number">01</div>
-                    <div>
-                        <h3>Diligently Serviced Fleet</h3>
-                        <p>Every truck in our fleet is professionally maintained on a strict schedule. We don't wait for breakdowns — we prevent them.</p>
-                    </div>
-                </div>
-                <div class="why-card">
-                    <div class="why-number">02</div>
-                    <div>
-                        <h3>Real People, Real Answers</h3>
-                        <p>When you call, you talk to someone who knows the equipment and can give you a straight answer. No phone trees, no runaround.</p>
-                    </div>
-                </div>
-                <div class="why-card">
-                    <div class="why-number">03</div>
-                    <div>
-                        <h3>Built for Contractors</h3>
-                        <p>We understand the construction industry because we've worked in it. We know what you need and when you need it.</p>
-                    </div>
-                </div>
-                <div class="why-card">
-                    <div class="why-number">04</div>
-                    <div>
-                        <h3>Competitive, Transparent Pricing</h3>
-                        <p>No hidden fees or surprise charges. We quote you a fair price upfront and stand behind it.</p>
-                    </div>
-                </div>
+            <div class="specs-columns">
+                <ul class="specs-list">
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Freightliner M2106 Chassis</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Automatic Transmissions</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4,000 US gallon tanks</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>ASTM A36 steel construction for durability</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>FEA tested and designed</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Internal baffles</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Full length shaped tank runners</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>LINE-X® Lined Fender trays</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>24" Manway with mesh lift out grate</li>
+                </ul>
+                <ul class="specs-list">
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Water level indicator</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>4" x 3" water pump</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>5 independently controlled spray heads with air operated valves</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Manual rewind hose reel with 50' of 1-1/2" hose</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>2-1/2" hydrant fill with anti-siphon air gap</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Heavy duty rear bumper</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>DOT compliant wiring and lighting</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Interior tank coating for superior protection</li>
+                    <li><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Powder-coated parts</li>
+                </ul>
             </div>
         </div>
     </section>
     
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <!-- Quote Form -->
+    <section class="quote-section" id="quote">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p class="section-label">Get Started</p>
-                    <h2>Ready to Rent?</h2>
-                    <p>Give us a call or fill out the form and we'll get back to you with availability and pricing. No pressure, no B.S.</p>
-                    <ul class="contact-details">
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            <a href="tel:8176015754">(817) 601-5754</a>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            <a href="/cdn-cgi/l/email-protection#e58c8b838aa59284918097919790868e96909595899ccb868a88"><span class="__cf_email__" data-cfemail="30595e565f704751445542444245535b434540405c491e535f5d">[email&#160;protected]</span></a>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            Fort Worth, TX
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-form">
-                    <form action="#" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
-                            </div>
+            <div class="section-header">
+                <p class="section-label">Get Started</p>
+                <h2>Request a Quote</h2>
+                <p>Tell us about your project and we'll get back to you with availability and pricing.</p>
+            </div>
+            <div class="quote-form">
+                <form action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
                         </div>
                         <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company" placeholder="ABC Construction">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="john@company.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                            </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
                         </div>
                         <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service...</option>
-                                <option value="daily">Daily Rental</option>
-                                <option value="weekly">Weekly Rental</option>
-                                <option value="monthly">Monthly Rental</option>
-                                <option value="long-term">Long-Term Contract</option>
-                            </select>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your project, location, and timeline..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-large">Send Request</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your project, location, and timeline..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Submit Request</button>
+                </form>
             </div>
         </div>
     </section>
@@ -1735,8 +379,8 @@
     <div class="cta-bar">
         <div class="container">
             <div class="cta-text">
-                <h2>Ready to Get Started?</h2>
-                <p>Call now for immediate availability and pricing.</p>
+                <h2>Have Questions?</h2>
+                <p>Call us for immediate answers about availability and pricing.</p>
             </div>
             <div class="cta-phone">
                 <a href="tel:8176015754">(817) 601-5754</a>
@@ -1749,7 +393,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="#" class="logo"><img src="Water_Truck_Supply_Logo.png" alt="Water Truck Supply"></a>
+                    <a href="/" class="logo"><img src="../Water_Truck_Supply_Logo.png" alt="Water Truck Supply"></a>
                     <p>No B.S. water truck rentals serving Texas and neighboring states. Late model fleet, professional service, honest communication.</p>
                 </div>
                 <div>
@@ -1776,7 +420,7 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            <a href="/cdn-cgi/l/email-protection#e980878f86a99e889d8c9b9d9b9c8a829a9c99998590c78a8684"><span class="__cf_email__" data-cfemail="8fe6e1e9e0cff8eefbeafdfbfdfaece4fcfaffffe3f6a1ece0e2">[email&#160;protected]</span></a>
+                            <a href="mailto:howdy@watertrucksupply.com">howdy@watertrucksupply.com</a>
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -1794,200 +438,5 @@
             </div>
         </div>
     </footer>
-    
-    <!-- Scroll Navigation Script -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Navigation scroll effect
-        const nav = document.getElementById('mainNav');
-        let lastScroll = 0;
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-            
-            lastScroll = currentScroll;
-        });
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = 80;
-                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationDelay = `${index * 0.15}s`;
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('.feature-card, .area-card, .why-card, .review-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            observer.observe(el);
-        });
-        
-        // Add animation styles dynamically
-        const style = document.createElement('style');
-        style.textContent = `
-            .animate-in {
-                animation: fadeInUp 0.4s ease forwards;
-            }
-        `;
-        document.head.appendChild(style);
-        
-        // ============================================
-        // GOOGLE REVIEWS INTEGRATION
-        // ============================================
-        
-        /*
-         * SETUP INSTRUCTIONS:
-         * 
-         * Option 1: Google Places API (Recommended for live data)
-         * ---------------------------------------------------------
-         * 1. Get a Google Places API key: https://console.cloud.google.com/
-         * 2. Enable "Places API" in your Google Cloud project
-         * 3. Replace 'YOUR_API_KEY' below with your actual API key
-         * 4. Replace 'YOUR_PLACE_ID' with your Google Place ID
-         *    (Find it at: https://developers.google.com/maps/documentation/places/web-service/place-id)
-         * 
-         * Option 2: Third-party Widget (Easier setup)
-         * ---------------------------------------------------------
-         * Services like Elfsight, Trustindex, or EmbedSocial offer
-         * Google Reviews widgets. Just paste their embed code in the
-         * reviewsContainer div.
-         */
-        
-        const GOOGLE_CONFIG = {
-            apiKey: 'AIzaSyA0iD4G7cRnTLcygb0250E2Mg-EJJaWHuk', // Google Places API key
-            placeId: 'ChIJs8Cu5GHRTYYRaxxD-xjaHxI', // Water Truck Supply Place ID
-        };
-        
-        // Fallback reviews (shown if API is not configured)
-        const fallbackReviews = [
-            {
-                author_name: "Mike Johnson",
-                rating: 5,
-                relative_time_description: "2 weeks ago",
-                text: "Best water truck rental experience I've had. Truck was in excellent condition, delivered on time, and their team was responsive when I had questions. Will definitely use again."
-            },
-            {
-                author_name: "Rodriguez Construction",
-                rating: 5,
-                relative_time_description: "1 month ago", 
-                text: "We've been using Water Truck Supply for 6 months now. Reliable equipment, fair pricing, and they actually answer the phone. Hard to find that these days."
-            },
-            {
-                author_name: "David Chen",
-                rating: 5,
-                relative_time_description: "3 weeks ago",
-                text: "Needed a truck last minute for a dust control issue on our site. They had one delivered within 4 hours. Saved our project from getting shut down. Highly recommend."
-            }
-        ];
-        
-        function renderReviews(reviews) {
-            const container = document.getElementById('reviewsContainer');
-            if (!container) return;
-            
-            container.innerHTML = reviews.map(review => `
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar">${review.author_name.charAt(0).toUpperCase()}</div>
-                        <div class="review-author">
-                            <div class="review-author-name">${review.author_name}</div>
-                            <div class="review-date">${review.relative_time_description}</div>
-                        </div>
-                    </div>
-                    <div class="review-stars">
-                        ${Array(5).fill(0).map((_, i) => `
-                            <svg viewBox="0 0 24 24" style="fill: ${i < review.rating ? '#FBBC04' : '#E5E7EB'}">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                            </svg>
-                        `).join('')}
-                    </div>
-                    <p class="review-text">${review.text}</p>
-                </div>
-            `).join('');
-            
-            // Re-observe new review cards for animation
-            document.querySelectorAll('.review-card').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                observer.observe(el);
-            });
-        }
-        
-        function updateRatingSummary(rating, totalReviews) {
-            const ratingEl = document.getElementById('googleRating');
-            const countEl = document.getElementById('reviewCount');
-            if (ratingEl) ratingEl.textContent = rating.toFixed(1);
-            if (countEl) countEl.textContent = `${totalReviews} reviews`;
-        }
-        
-        async function loadGoogleReviews() {
-            if (GOOGLE_CONFIG.apiKey && GOOGLE_CONFIG.placeId) {
-                // Load Google Places library and fetch real reviews
-                try {
-                    const script = document.createElement('script');
-                    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_CONFIG.apiKey}&libraries=places`;
-                    script.async = true;
-                    script.onload = () => {
-                        const service = new google.maps.places.PlacesService(document.createElement('div'));
-                        service.getDetails({
-                            placeId: GOOGLE_CONFIG.placeId,
-                            fields: ['reviews', 'rating', 'user_ratings_total']
-                        }, (place, status) => {
-                            if (status === google.maps.places.PlacesServiceStatus.OK && place.reviews) {
-                                renderReviews(place.reviews.slice(0, 3));
-                                updateRatingSummary(place.rating, place.user_ratings_total);
-                                
-                                // Update the review link with correct Place ID
-                                const reviewLink = document.querySelector('.reviews-cta a');
-                                if (reviewLink) {
-                                    reviewLink.href = `https://search.google.com/local/writereview?placeid=${GOOGLE_CONFIG.placeId}`;
-                                }
-                            } else {
-                                renderReviews(fallbackReviews);
-                            }
-                        });
-                    };
-                    document.head.appendChild(script);
-                } catch (error) {
-                    console.error('Error loading Google reviews:', error);
-                    renderReviews(fallbackReviews);
-                }
-            } else {
-                // Use fallback reviews
-                renderReviews(fallbackReviews);
-            }
-        }
-        
-        // Load reviews on page load
-        loadGoogleReviews();
-    </script>
 </body>
 </html>
