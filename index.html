@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Water Truck Supply | Fort Worth, TX</title>
-    <meta name="description" content="Contact Water Truck Supply for water truck rentals and sales in Texas. Call (817) 601-5754 or email howdy@watertrucksupply.com. Fort Worth, TX.">
+    <title>Water Trucks for Sale | Water Truck Supply | Fort Worth, TX</title>
+    <meta name="description" content="Buy quality water trucks from Water Truck Supply. Late model Freightliner M2106 4,000 gallon water trucks available. Superior quality, competitive pricing.">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -49,6 +49,7 @@
         .btn:hover { transform: scale(1.05); }
         .btn-primary { background: var(--primary-blue); color: var(--white); }
         .btn-dark { background: var(--black); color: var(--white); }
+        .btn-outline { background: transparent; border: 2px solid var(--black); color: var(--black); padding: 12px 26px; }
         .btn-large { padding: 18px 36px; font-size: 1.1rem; }
         
         /* Utility Bar */
@@ -80,38 +81,53 @@
         .page-header::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
         .page-header .container { position: relative; z-index: 2; }
         .page-header h1 { color: var(--white); margin-bottom: var(--space-sm); }
-        .page-header p { color: var(--light-gray); font-size: 1.2rem; max-width: 600px; margin: 0 auto; }
+        .page-header p { color: var(--light-gray); font-size: 1.2rem; max-width: 700px; margin: 0 auto var(--space-md); }
+        .page-header .btn { margin: 0 var(--space-xs); }
         
-        /* Contact Section */
-        .contact { padding: var(--space-2xl) 0; background: var(--white); }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-xl); }
-        @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+        /* Sales Section */
+        .sales-intro { padding: var(--space-2xl) 0; background: var(--white); }
+        .section-header { text-align: center; max-width: 600px; margin: 0 auto var(--space-xl); }
+        .section-label { font-family: var(--font-headline); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-blue); margin-bottom: var(--space-sm); }
         
-        /* Contact Info */
-        .contact-info h2 { margin-bottom: var(--space-md); }
-        .contact-info > p { color: var(--charcoal); margin-bottom: var(--space-lg); }
-        .contact-methods { display: flex; flex-direction: column; gap: var(--space-md); }
-        .contact-method { display: flex; align-items: flex-start; gap: var(--space-md); padding: var(--space-md); background: var(--off-white); border-radius: var(--card-radius); border: 2px solid var(--light-gray); transition: transform 0.15s ease; }
-        .contact-method:hover { transform: scale(1.02); }
-        .contact-method-icon { width: 50px; height: 50px; background: var(--primary-blue); border-radius: var(--card-radius); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .contact-method-icon svg { width: 26px; height: 26px; fill: var(--white); }
-        .contact-method h3 { margin-bottom: 4px; font-size: 1.1rem; }
-        .contact-method p { color: var(--gray); margin-bottom: 0; }
-        .contact-method a { color: var(--primary-blue); font-weight: 600; font-size: 1.1rem; transition: color 0.15s ease; }
-        .contact-method a:hover { color: var(--primary-dark); }
+        /* Product Grid */
+        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); margin-bottom: var(--space-xl); }
+        @media (max-width: 768px) { .products-grid { grid-template-columns: 1fr; } }
+        .product-card { background: var(--off-white); border: 2px solid var(--light-gray); border-radius: var(--card-radius); overflow: hidden; transition: transform 0.15s ease; }
+        .product-card:hover { transform: scale(1.02); }
+        .product-image { aspect-ratio: 4/3; overflow: hidden; background: var(--light-gray); }
+        .product-image img { width: 100%; height: 100%; object-fit: cover; }
+        .product-content { padding: var(--space-md); }
+        .product-content h3 { margin-bottom: var(--space-xs); }
+        .product-price { font-family: var(--font-headline); font-size: 1.5rem; font-weight: 700; color: var(--primary-blue); margin-bottom: var(--space-sm); }
+        .product-price .original { text-decoration: line-through; color: var(--gray); font-size: 1rem; margin-right: var(--space-xs); }
+        .product-content p { color: var(--gray); margin-bottom: var(--space-md); }
         
-        /* Contact Form */
-        .contact-form { background: var(--off-white); border-radius: var(--card-radius); padding: var(--space-lg); }
-        .contact-form h2 { margin-bottom: var(--space-md); }
+        /* Why Buy Section */
+        .why-buy { padding: var(--space-2xl) 0; background: var(--off-white); }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-md); }
+        @media (max-width: 900px) { .why-grid { grid-template-columns: 1fr; } }
+        .why-card { background: var(--white); border: 2px solid var(--light-gray); border-radius: var(--card-radius); padding: var(--space-lg); transition: transform 0.15s ease; }
+        .why-card:hover { transform: scale(1.03); }
+        .why-number { font-family: var(--font-headline); font-size: 3rem; font-weight: 700; color: var(--primary-blue); line-height: 1; margin-bottom: var(--space-sm); }
+        .why-card h3 { margin-bottom: var(--space-xs); }
+        .why-card p { color: var(--gray); margin-bottom: 0; }
+        
+        /* Quote Form Section */
+        .quote-section { padding: var(--space-2xl) 0; background: var(--black); color: var(--white); position: relative; }
+        .quote-section::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); opacity: 0.05; pointer-events: none; }
+        .quote-section .container { position: relative; z-index: 2; }
+        .quote-section .section-header h2 { color: var(--white); }
+        .quote-section .section-header p { color: var(--light-gray); }
+        .quote-form { max-width: 600px; margin: 0 auto; background: var(--charcoal); border-radius: var(--card-radius); padding: var(--space-lg); }
         .form-group { margin-bottom: var(--space-sm); }
-        .form-group label { display: block; font-family: var(--font-headline); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--charcoal); margin-bottom: var(--space-xs); }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 16px; border: 2px solid var(--charcoal); border-radius: var(--border-radius); font-family: var(--font-body); font-size: 0.95rem; color: var(--black); background: var(--white); transition: border-color 0.15s ease; }
+        .form-group label { display: block; font-family: var(--font-headline); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--white); margin-bottom: var(--space-xs); }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 14px 16px; border: 2px solid var(--gray); border-radius: var(--border-radius); font-family: var(--font-body); font-size: 0.95rem; color: var(--white); background: var(--black); transition: border-color 0.15s ease; }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary-blue); }
         .form-group input::placeholder, .form-group textarea::placeholder { color: var(--gray); }
-        .form-group textarea { resize: vertical; min-height: 150px; }
+        .form-group textarea { resize: vertical; min-height: 120px; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
         @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
-        .contact-form .btn { width: 100%; margin-top: var(--space-sm); }
+        .quote-form .btn { width: 100%; margin-top: var(--space-sm); }
         
         /* CTA Bar */
         .cta-bar { background: var(--primary-blue); padding: var(--space-lg) 0; position: relative; }
@@ -193,85 +209,129 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Have a question? We're here to help! For sales or support, reach out and we'll get back to you promptly.</p>
+            <h1>No B.S. Water Truck Sales</h1>
+            <p>We specialize in selling quality 4,000 gallon water trucks across Texas and into neighboring states. Late model, low mileage units that are professionally maintained.</p>
+            <a href="tel:8176015754" class="btn btn-primary">Give Us a Call</a>
+            <a href="#quote" class="btn btn-outline-white">Request a Quote</a>
         </div>
     </section>
     
-    <!-- Contact Section -->
-    <section class="contact">
+    <!-- Products Section -->
+    <section class="sales-intro">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <p>Whether you need a rental quote, want to discuss a purchase, or just have questions about our services, we're happy to help. No pressure, no B.S.</p>
-                    
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                            </div>
-                            <div>
-                                <h3>Call Us</h3>
-                                <p>For immediate assistance</p>
-                                <a href="tel:8176015754">(817) 601-5754</a>
-                            </div>
+            <div class="section-header">
+                <p class="section-label">Available Inventory</p>
+                <h2>Water Trucks for Sale</h2>
+                <p>Quality equipment ready to go to work for you.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../Water_Truck.webp" alt="2024 Freightliner M2106 Water Truck">
+                    </div>
+                    <div class="product-content">
+                        <h3>2024 Freightliner M2106 Water Truck</h3>
+                        <div class="product-price">
+                            <span class="original">$189,000</span>
+                            $185,000
                         </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                            </div>
-                            <div>
-                                <h3>Email Us</h3>
-                                <p>We'll respond within 24 hours</p>
-                                <a href="mailto:howdy@watertrucksupply.com">howdy@watertrucksupply.com</a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-method-icon">
-                                <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            </div>
-                            <div>
-                                <h3>Our Location</h3>
-                                <p>Fort Worth, TX area</p>
-                                <span style="color: var(--charcoal);">516 E Byron Nelson Blvd, #1264<br>Roanoke, TX 76262</span>
-                            </div>
-                        </div>
+                        <p>Late model 4,000 gallon water truck with low hours. GPS tracking, backup camera, automatic transmission.</p>
+                        <a href="/contact-us/" class="btn btn-primary">Inquire Now</a>
                     </div>
                 </div>
-                
-                <div class="contact-form">
-                    <h2>Send Us a Message</h2>
-                    <form action="#" method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="john@company.com" required>
-                            </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../Water_Truck.webp" alt="2024 Freightliner M2106 Plus Water Truck">
+                    </div>
+                    <div class="product-content">
+                        <h3>2024 Freightliner M2106 Plus Water Truck</h3>
+                        <div class="product-price">$192,000</div>
+                        <p>Premium 4,000 gallon water truck. Fully loaded with all options. Ready for immediate delivery.</p>
+                        <a href="/contact-us/" class="btn btn-primary">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why Buy Section -->
+    <section class="why-buy">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Advantage</p>
+                <h2>Why Buy From Water Truck Supply?</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-number">01</div>
+                    <h3>Superior Quality</h3>
+                    <p>We provide only the highest quality water trucks from top-tier manufacturers. Every vehicle offers robust performance and durability.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">02</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>We understand the importance of value. You'll receive a high-quality water truck at a cost-effective price.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">03</div>
+                    <h3>Expert Guidance</h3>
+                    <p>Our experienced team will work with you to understand your specific needs and guide you to the perfect truck.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">04</div>
+                    <h3>After-Sales Support</h3>
+                    <p>Our relationship extends beyond the initial sale. We offer support to ensure your vehicle performs optimally.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">05</div>
+                    <h3>Broad Selection</h3>
+                    <p>From small models for narrow job sites to large-capacity trucks for major projects, we have what you need.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-number">06</div>
+                    <h3>Industry Expertise</h3>
+                    <p>Because we're not a dealership, we can offer the most productive solution for your job regardless of brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quote Form -->
+    <section class="quote-section" id="quote">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Get More Info</p>
+                <h2>Request More Information</h2>
+                <p>Interested in purchasing? Complete the form below and we'll be in touch.</p>
+            </div>
+            <div class="quote-form">
+                <form action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="John" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your project or question..."></textarea>
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us which truck you're interested in..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Submit Request</button>
+                </form>
             </div>
         </div>
     </section>
@@ -280,8 +340,8 @@
     <div class="cta-bar">
         <div class="container">
             <div class="cta-text">
-                <h2>Prefer to Talk?</h2>
-                <p>Give us a call for immediate answers.</p>
+                <h2>Ready to Buy?</h2>
+                <p>Call us to discuss pricing and availability.</p>
             </div>
             <div class="cta-phone">
                 <a href="tel:8176015754">(817) 601-5754</a>
